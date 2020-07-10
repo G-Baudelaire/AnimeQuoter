@@ -1,7 +1,7 @@
 import os
 
 import aiohttp
-from discord.ext.commands import Bot, errors
+from discord.ext import commands
 from dotenv import load_dotenv
 
 from core import dbquery
@@ -10,7 +10,7 @@ client = aiohttp.ClientSession()
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
-bot = Bot(command_prefix="!quote ")
+bot = commands.Bot(command_prefix="!quote ")
 
 
 @bot.command(name="rand", help="Responds with a quote from a random character from a random anime.")
@@ -33,7 +33,7 @@ async def anime_quote(ctx, *args: str):
 
 @bot.event
 async def on_command_error(ctx, error):
-    if isinstance(error, errors.CommandNotFound):
+    if isinstance(error, commands.errors.CommandNotFound):
         await ctx.send("Command does not exist.")
 
 
