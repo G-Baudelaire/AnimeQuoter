@@ -1,5 +1,5 @@
 # AnimeQuoter
-Discord bot that uses an Anime-Chan(https://anime-chan.herokuapp.com/) api to provide on demand anime quotes.
+Discord bot that uses an [Anime-Chan](https://anime-chan.herokuapp.com/) api to provide on demand anime quotes.
 f
 ## Interface
 `!quote ` is the prefix for all commands.  
